@@ -1,0 +1,47 @@
+<div class="container">
+  <header
+    class="alert alert-light mb-4 mt-4 d-xl-flex justify-content-center gap-xl-4 align-items-center"
+    *ngIf="student; else falseBlock"
+  >
+    <h2 class="text-success">{{ student.name }} Album</h2>
+  </header>
+  <div class="row">
+    <div class="col flex-wrap d-lg-flex justify-content-center gap-lg-3 pt-3">
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/1.jpg" class="card-img" alt="img1" />
+      </figure>
+
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/2.jpg" class="card-img" alt="img2" />
+      </figure>
+
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/3.jpg" class="card-img" alt="img7" />
+      </figure>
+
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/4.jpg" class="card-img" alt="img8" />
+      </figure>
+
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/5.jpg" class="card-img" alt="img9" />
+      </figure>
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/6.jpg" class="card-img" alt="img9" />
+      </figure>
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/7.jpg" class="card-img" alt="img9" />
+      </figure>
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/8.jpg" class="card-img" alt="img9" />
+      </figure>
+      <figure class="card col col-lg-3 m-2">
+        <img src="assets/Photos/9.jpg" class="card-img" alt="img9" />
+      </figure>
+    </div>
+  </div>
+
+  <ng-template #falseBlock>
+    <h1 class="alert alert-danger">Loading....</h1>
+  </ng-template>
+</div>

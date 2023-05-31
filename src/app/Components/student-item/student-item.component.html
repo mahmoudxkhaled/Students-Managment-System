@@ -1,0 +1,56 @@
+<!-- <div *ngFor="let s of Students"> -->
+<table
+  class="table table-dark table-hover text-center align-middle container rounded border border-secondary fixed-width-table"
+>
+  <thead class="m-100">
+    <tr
+      class="bg-success table-secondary text-dark align-middle border border-secondary"
+      style="font-family: cursive; font-size: 20px"
+    >
+      <th style="width: 100px">ID</th>
+      <th style="width: 150px">Name</th>
+      <th style="width: 80px">Age</th>
+      <th style="width: 200px">Email</th>
+      <th style="width: 120px">Details</th>
+      <th style="width: 100px">Update</th>
+      <th style="width: 100px">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="border border-secondary">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.email }}</td>
+
+      <td>
+        <div class="d-block m-2">
+          <a
+            class="btn btn-outline-success"
+            routerLink="/students/{{ student.id }}"
+            >More Details</a
+          >
+        </div>
+      </td>
+      <td>
+        <div class="d-block m-2">
+          <a
+            class="btn btn-outline-success"
+            routerLink="/update/{{ student.id }}"
+            >Update</a
+          >
+        </div>
+      </td>
+      <td>
+        <div class="d-block m-2">
+          <a
+            class="btn btn-outline-success"
+            (click)="deleteStudent(student.id)"
+            routerLink="/students"
+            >Delete</a
+          >
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

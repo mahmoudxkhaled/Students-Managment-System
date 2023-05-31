@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="col">
+    <div class="row">
+      <form class="form" [formGroup]="StudentValid">
+        <div class="form-group d-flex m-2">
+          <label class="col-3">User Name</label>
+          <input
+            formControlName="username"
+            #username
+            class="form-control"
+            type="text"
+          />
+        </div>
+        <div class="form-group d-flex m-2">
+          <label class="col-3">Name</label>
+          <input
+            formControlName="name"
+            #name
+            class="form-control"
+            type="text"
+            style="margin-left: 19px"
+            [ngStyle]="{
+              'border-color': name.value
+                ? NameValid && name.value
+                  ? 'green'
+                  : 'red'
+                : ''
+            }"
+          />
+        </div>
+
+        <div class="form-group d-flex m-2">
+          <label class="col-3">Age</label>
+          <input
+            formControlName="age"
+            #age
+            class="form-control"
+            type="text"
+            [ngStyle]="{
+              'border-color': age.value
+                ? !AgeValid && age.value
+                  ? 'green'
+                  : 'red'
+                : ''
+            }"
+          />
+        </div>
+
+        <div class="form-group d-flex m-2">
+          <label class="col-3">Email</label>
+          <input
+            formControlName="email"
+            #email
+            class="form-control"
+            type="email"
+            style="margin-left: 19px"
+            [ngStyle]="{
+              'border-color': email.value
+                ? EmailValid && email.value
+                  ? 'green'
+                  : 'red'
+                : ''
+            }"
+          />
+        </div>
+        <div class="form-group d-flex m-2">
+          <label class="col-3">City</label>
+          <input
+            formControlName="city"
+            #city
+            class="form-control"
+            type="text"
+          />
+        </div>
+        <div class="form-group d-flex m-2">
+          <label class="col-3">Phone</label>
+          <input
+            formControlName="phone"
+            #phone
+            class="form-control"
+            type="text"
+            [ngStyle]="{
+              'border-color': phone.value
+                ? !PhoneValid && phone.value
+                  ? 'green'
+                  : 'red'
+                : ''
+            }"
+          />
+        </div>
+        <div class="form-group d-flex m-2">
+          <label class="col-3">Website</label>
+          <input
+            formControlName="website"
+            #website
+            class="form-control"
+            type="text"
+          />
+        </div>
+        <div class="form-group d-flex m-2">
+          <label class="col-3">Company</label>
+          <input
+            formControlName="company"
+            #company
+            class="form-control"
+            type="text"
+          />
+        </div>
+        <div class="form-group text-center m-2">
+          <input
+            class="btn btn-outline-success"
+            type="button"
+            value="ADD"
+            (click)="
+              AddStudent(
+                username.value,
+                name.value,
+                age.value,
+                email.value,
+                phone.value,
+                website.value,
+                company.value,
+                city.value
+              )
+            "
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div *ngIf="student; else falseBlock">
+  <table
+    class="table table-striped text-center container m-auto text-center w-50 border border-secondary shadow p-3 mb-5 bg-body-tertiary rounded"
+  >
+    <tbody>
+      <tr>
+        <td>ID</td>
+        <td>{{ student.id }}</td>
+      </tr>
+      <tr>
+        <td>User Name</td>
+        <td>{{ student.username }}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{ student.name }}</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>{{ student.age }}</td>
+      </tr>
+
+      <tr>
+        <td>Email</td>
+        <td>{{ student.email }}</td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td>
+          {{ student.city }}
+        </td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>{{ student.phone }}</td>
+      </tr>
+      <tr>
+        <td>Website</td>
+        <td>{{ student.website }}</td>
+      </tr>
+      <tr>
+        <td>Company</td>
+        <td>{{ student.company }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #falseBlock>
+  <h1>Loading...</h1>
+</ng-template>
+
+<app-album></app-album>

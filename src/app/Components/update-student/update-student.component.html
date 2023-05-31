@@ -1,0 +1,135 @@
+<div *ngIf="student; else falseBlock">
+  <table
+    class="table table-striped text-center container m-auto text-center w-50 border border-secondary shadow p-3 mb-5 bg-body-tertiary rounded"
+  >
+    <tbody>
+      <tr>
+        <td>ID</td>
+        <td>
+          <input
+            #id
+            [(ngModel)]="student.id"
+            class="form-group d-flex w-100"
+            type="text"
+            readonly
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>User Name</td>
+        <td>
+          <input
+            #username
+            [(ngModel)]="student.username"
+            class="form-group d-flex w-100"
+            type="text"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>
+          <input
+            #name
+            [(ngModel)]="student.name"
+            class="form-group d-flex w-100"
+            type="text"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>
+          <input
+            #age
+            [(ngModel)]="student.age"
+            class="form-group d-flex w-100"
+            type="text"
+          />
+        </td>
+      </tr>
+
+      <tr>
+        <td>Email</td>
+        <td>
+          <input
+            #email
+            [(ngModel)]="student.email"
+            class="form-group d-flex w-100"
+            type="text"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td>
+          <input
+            #city
+            [(ngModel)]="student.city"
+            class="form-group d-flex w-100"
+            type="text"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>
+          <input
+            #phone
+            [(ngModel)]="student.phone"
+            class="form-group d-flex w-100"
+            type="text"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Website</td>
+        <td>
+          <input
+            #website
+            [(ngModel)]="student.website"
+            class="form-group d-flex w-100"
+            type="text"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Company</td>
+        <td>
+          <input
+            #company
+            [(ngModel)]="student.company"
+            class="form-group d-flex w-100"
+            type="text"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <input
+      type="button"
+      class="btn btn-warning border"
+      value="Update User"
+      (click)="
+        update(
+          username.value,
+          name.value,
+          age.value,
+          email.value,
+          city.value,
+          phone.value,
+          website.value,
+          company.value
+        )
+      "
+    />
+  </div>
+</div>
+
+<ng-template #falseBlock>
+  <!-- <h1>Loading...</h1> -->
+  <div class="m-50">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
