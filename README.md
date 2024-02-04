@@ -27,11 +27,3 @@ The web application is built using Angular, Bootstrap, and HTML, providing a res
 - **Bootstrap:** A popular CSS framework for creating responsive and visually appealing user interfaces.
 
 - **HTML:** The standard markup language for creating web pages.
-
-## Getting Started
-
-To run the Students Management System locally, follow these steps:
-
-1. Clone the repository.
-   ```bash
-   git clone https://github.com/your-username/students-management-system.git
