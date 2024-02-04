@@ -20,7 +20,7 @@ The system supports the following CRUD operations:
 
 The web application is built using Angular, Bootstrap, and HTML, providing a responsive and user-friendly interface. The design focuses on simplicity and efficiency, making it easy for users to navigate and interact with the system.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - **Angular:** A powerful frontend framework for building dynamic web applications.
 
